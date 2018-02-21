@@ -2,20 +2,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { RouterModule } from '@angular/router'; 
 import { AppComponent } from './app.component';
-import {MovieControlerService} from '../services/moviecontroler.service';
+import {MovieControllerService} from '../services/moviecontroller.service';
+import { HomeComponent } from './home/home.component';
+import { MovieComponent } from './movie/movie.component';
+import { routes } from './routes';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes)  // Configure the router module
   ],
-  providers: [MovieControlerService],
+  providers: [MovieControllerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
