@@ -1,3 +1,9 @@
 <p>
   home works!
 </p>
+<div *ngFor="let movie of moviesHome">
+    <hr>
+    <p>{{movie.room}}</p> 
+    <img [src]="movie.poster" [alt]="movie.title" width="200">
+    <button (click)="goToMovie(movie.id)">{{movie.title}}</button>
+</div>
