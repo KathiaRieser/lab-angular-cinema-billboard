@@ -1,3 +1,13 @@
 <p>
   movie works!
-</p>
+</p> 
+<p>{{movie.title}}</p> 
+<p>{{movie.synopsis}}</p> 
+<p>{{movie.genres}}</p> 
+<p>{{movie.year}}</p> 
+<p>{{movie.director}}</p> 
+<p>{{movie.actors}}</p> 
+<p>{{movie.hours}}</p> 
+<p>Room: {{movie.room}}</p> 
+<img [src]="movie.poster" [alt]="movie.title" width="200">
+<button (click)="goToHome()">Home</button>

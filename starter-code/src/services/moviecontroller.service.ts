@@ -34,8 +34,8 @@ export class MovieControllerService{
      };
      
      getMovie(idMovie:number):movieInterface{
-       
-      return this.movies.filter(x=>x.id === idMovie)[0];
+      //return this.movies.filter( (x) => {console.log(typeof(x.id));  x.id == idMovie})[0];
+      return this.movies.filter(x=> x.id == idMovie)[0];
        
      };
 }
