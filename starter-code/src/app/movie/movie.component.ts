@@ -15,7 +15,11 @@ export class MovieComponent implements OnInit {
   constructor(public router:ActivatedRoute , public movies:MovieControllerService, public routerHome:Router ) {
 
     this.router.params.subscribe(p => {
-      this.filmId = p.id;
+      this.filmId = parseInt(p.id);
+      //console.log("entramos: " + typeof(this.filmId));
+      //this.filmId = p.id;
+      //console.log("mi var:" + this.filmId);
+      //console.log("type " + typeof(this.filmId));
       this.movie = this.movies.getMovie(this.filmId);
     });
 
