@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import{MovieControllerService} from '../../services/moviecontroller.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import {movieInterface} from '../../services/movieInterface';
 
 @Component({
   selector: 'app-movie',
@@ -11,7 +12,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class MovieComponent implements OnInit {
 
   filmId:number;
-  movie:any;
+  //movie:any;
+  movie:movieInterface;
   constructor(public router:ActivatedRoute , public movies:MovieControllerService, public routerHome:Router ) {
 
     this.router.params.subscribe(p => {
